@@ -1,4 +1,4 @@
-var crono1;
+var idCrono1;
 
 function incrementar(){
     cont = document.getElementById("cont").innerHTML++;
@@ -6,12 +6,24 @@ function incrementar(){
 
 function play(){
 
-    crono1 = setInterval(incrementar, 1000);
+    idCrono1 = setInterval(incrementar, 1000);
+    document.getElementById('btnPlay').disabled = true;
+    document.getElementById('btnPause').disabled = false;
+    document.getElementById('btnParar').disabled = false;
     
+}
+
+function pausar(){
+
+    clearInterval(idCrono1);
+    document.getElementById('btnPlay').disabled = false;
+    document.getElementById('btnPause').disabled = true;
+    document.getElementById('btnParar').disabled = true;
+
 }
 
 function parar(){
 
-    clearInterval(crono1);
-
+    pausar();
+    document.getElementById('cont').innerHTML = `0`;
 }

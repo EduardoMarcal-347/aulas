@@ -9,8 +9,10 @@
 </head>
 <body>
     <form action="">
-        <input type="button" value="play" onclick="play()">
-        <input type="button" value="parar" onclick="parar()">
+        <input type="button" value="Play" id="btnPlay" onclick="play()">
+        <input type="button" value="Pause" id="btnPause" onclick="pausar()" disabled>
+        <br><br>
+        <input type="button" value="Parar" id="btnParar" onclick="parar()" disabled>
     </form>
     <p>Contador: <span id="cont">0</span></p>
 </body>
