@@ -7,23 +7,29 @@ function incrementar(){
 function play(){
 
     idCrono1 = setInterval(incrementar, 1000);
-    document.getElementById('btnPlay').disabled = true;
-    document.getElementById('btnPause').disabled = false;
-    document.getElementById('btnParar').disabled = false;
+    statusBtn(true, false, false);
     
 }
 
 function pausar(){
-
+    
     clearInterval(idCrono1);
-    document.getElementById('btnPlay').disabled = false;
-    document.getElementById('btnPause').disabled = true;
-    document.getElementById('btnParar').disabled = true;
-
+    statusBtn(false, true, false);
+    
 }
 
 function parar(){
-
+    
     pausar();
     document.getElementById('cont').innerHTML = `0`;
+    statusBtn(false, true, true);
+
+}
+
+function statusBtn(statusPlay, statusPause, statusParar){
+
+    document.getElementById('btnPlay').disabled = statusPlay;
+    document.getElementById('btnPause').disabled = statusPause;
+    document.getElementById('btnParar').disabled = statusParar;
+
 }
