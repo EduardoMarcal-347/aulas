@@ -3,6 +3,7 @@ var slideShow = [
     {img: "celular2.jpg", nome: "Iphone", descricao: "Descrição do produto 2", valor:"R$ 500"},
     {img: "celular3.jpg", nome: "Lg", descricao: "Descrição do produto 3", valor:"R$ 1500"}
 ];
+
 var pos = 1;
 var timer;
 
