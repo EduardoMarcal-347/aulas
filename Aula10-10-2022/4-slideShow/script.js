@@ -1,5 +1,6 @@
 var vetImgs = ["celular1.jpg", "celular2.jpg", "celular3.jpg"];
 var pos = 1;
+var slideShow;
 
 function mudarImg(){
 
@@ -11,6 +12,11 @@ function mudarImg(){
 
 function play(){
 
-    setInterval(mudarImg, 3000);
+    slideShow = setInterval(mudarImg, 1000);
+
+}
+function pause(){
+
+    clearInterval(slideShow);
 
 }

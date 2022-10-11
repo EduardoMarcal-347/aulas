@@ -7,12 +7,9 @@
     <title>Document</title>
     <script src="script.js"></script>
 </head>
-<body>
-    <form action="">
-        <input type="button" value="Iniciar" onclick="play()">
-    </form>
+<body onload="play()">
 
-    <img id="slideShow" src="img/celular1.jpg" alt="">
+    <img id="slideShow" src="img/celular1.jpg" alt="" onmouseenter="pause()" onmouseleave="play()">
 
 </body>
 </html>
