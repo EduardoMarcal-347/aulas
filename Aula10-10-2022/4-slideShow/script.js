@@ -1,10 +1,17 @@
-var vetImgs = ["celular1.jpg", "celular2.jpg", "celular3.jpg"];
+var slideShow = [
+    {img: "celular1.jpg", nome: "Samsung", descricao: "Descrição do produto 1", valor:"R$ 2000"},
+    {img: "celular2.jpg", nome: "Iphone", descricao: "Descrição do produto 2", valor:"R$ 500"},
+    {img: "celular3.jpg", nome: "Lg", descricao: "Descrição do produto 3", valor:"R$ 1500"}
+];
 var pos = 1;
-var slideShow;
+var timer;
 
 function mudarImg(){
 
-    document.getElementById('slideShow').src = `img/${vetImgs[pos++]}`;
+    document.getElementById('slideShow').src = `img/${slideShow[pos].img}`;
+    document.getElementById('nome').innerHTML = `Nome: ${slideShow[pos].nome}`
+    document.getElementById('descricao').innerHTML = slideShow[pos].descricao;
+    document.getElementById('valor').innerHTML = `Valor: ${slideShow[pos++].valor}`;
     if(pos==3){
         pos=0;
     }
@@ -12,11 +19,11 @@ function mudarImg(){
 
 function play(){
 
-    slideShow = setInterval(mudarImg, 1000);
+    timer = setInterval(mudarImg, 2500);
 
 }
 function pause(){
 
-    clearInterval(slideShow);
+    clearInterval(timer);
 
 }
