@@ -1,4 +1,4 @@
-package com.edumsfilho347.demo;
+package com.eduardo.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
